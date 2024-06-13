@@ -9,8 +9,7 @@ import { useCreateCabin } from "./useCreateCabin";
 import { formatCurrency } from "../../utils/helpers";
 import ConfirmDelete from "../../ui/ConfirmDelete";
 import { HiSquare2Stack } from "react-icons/hi2";
-import { HiPencil } from "react-icons/hi";
-import { HiTrash } from "react-icons/hi";
+import { HiPencil,HiTrash } from "react-icons/hi";
 // const TableRow = styled.div`
 //   display: grid;
 //   grid-template-columns: 0.6fr 1.8fr 2.2fr 1fr 1fr 1fr;
@@ -77,15 +76,14 @@ export default function CabinRow({ cabin }) {
               <Menus.Toggle id={cabinId} />
               <Menus.List id={cabinId}>
                 <Menus.Button icon={<HiSquare2Stack />} onClick={handleDuplicate}>
-
-                  Duplicate</Menus.Button>
+                  Duplicate
+                </Menus.Button>
                 <Modal.Open opens="editCabin">
                   <Menus.Button icon={<HiPencil />}>Edit</Menus.Button>
                 </Modal.Open>
                 <Modal.Open opens="delete">
                   <Menus.Button icon={<HiTrash />}>Delete</Menus.Button>
                 </Modal.Open>
-
               </Menus.List>
 
 

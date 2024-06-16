@@ -1,4 +1,3 @@
-import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import {getSettings} from '../../services/apiSettings'
 export function useSettings() {
@@ -8,6 +7,5 @@ export function useSettings() {
         queryKey:['settings'],
         queryFn:getSettings
     })
-    console.log(settings)
-    return {isLoading,error,settings}
+    return {settings,isLoading,error}
 }

@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
 function Header() {
   return (
     <StyledHeader>
-        Header
+        {/* Header */}
     </StyledHeader>
   )
 }

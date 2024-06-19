@@ -13,7 +13,6 @@ export function useDeleteCabin() {
     },
     onError:(error)=>{
       toast.error("Could not delete cabin")
-      console.log(error)
     }
   })
   return {isDeleting,deleteCabin}

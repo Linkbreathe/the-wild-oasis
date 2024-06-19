@@ -4,7 +4,7 @@ import { useLocalStorageState } from "../../hooks/useLocalStorageState"
 const DarkModeContext = createContext()
 
 function DarkModeProvider({ children }) {
-    const [isDarkMode, setIsDarkMode] = useLocalStorageState(false, "isDarkMode")
+    const [isDarkMode, setIsDarkMode] = useLocalStorageState(true, "isDarkMode")
     useEffect(function(){
         if(isDarkMode){
             document.documentElement.classList.add("dark-mode")
@@ -17,15 +17,15 @@ function DarkModeProvider({ children }) {
     function toggleDarkMode() {
         setIsDarkMode(isDarkMode => !isDarkMode)
     }
-    return <DarkModeContext.Provider value={{ isDarkMode,toggleDarkMode }}>
+    return <DarkModeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
         {children}
     </DarkModeContext.Provider>
 }
 function useDarkMode() {
+    // the context storing the value of isDarkMode and toggleDarkMode
     const context = useContext(DarkModeContext)
     if (context === undefined)
         throw new Error("using outside of DarkModeContext Provider")
-    
     return context
 }
 export {DarkModeProvider,useDarkMode}

@@ -48,13 +48,11 @@ export async function updateCurrentUser({ password, fullName, avatar }) {
     if (fullName) updateData = { data: { fullName } }
 
     const { data, error } = await supabase.auth.updateUser(updateData)
-    console.log(data)
 
     if (error) throw new Error(error.message)
     if (!avatar) return data
 
     // 2.upload avatar
-    console.log(data)
     const fileName = `avatar-${data.userName}-${data.id}-${Math.random()}`
     const { error: storageError } = await supabase.storage.from("avatars").upload(fileName, avatar)
     if (storageError) throw new Error(storageError.message)

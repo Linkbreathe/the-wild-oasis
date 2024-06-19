@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BookingDataBox from "../../features/bookings/BookingDataBox";
+import BookingDataBox from "../bookings/BookingDataBox";
 
 import Row from "../../ui/Row";
 import Heading from "../../ui/Heading";
@@ -43,7 +43,8 @@ function CheckinBooking() {
     hasBreakfast,
     numNights,
   } = booking;
- const optionalBreakfastPrice = 
+  
+  const optionalBreakfastPrice = 
     settings.breakfastPrice * numNights * numGuests
 
   function handleCheckin() {
@@ -60,7 +61,6 @@ function CheckinBooking() {
     }else{
       checkin({bookingId,breakfast:{}})
     }
-    checkin(bookingId)
   }
 
   return (

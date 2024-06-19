@@ -18,19 +18,16 @@ export async function getBookings({ filter, sortBy, page }) {
       ascending: sortBy.direction === "asc"
     }
   )
-  console.log(page)
   // PAGE
   if (page) {
     const from = (page - 1) * PAGE_SIZE
     const to = from + PAGE_SIZE - 1
-    console.log(from,to)
     query = query.range(from, to)
   }
 
   const { data, error, count } = await query;
 
   if (error) {
-    console.log(error)
     throw new Error("Bookings could not be loaded")
   }
   return { data, count }
@@ -69,7 +66,6 @@ export async function getBookingsAfterDate(date) {
 
 // Returns all STAYS that are were created after the given date
 export async function getStaysAfterDate(date) {
-  console.log(date)
   const { data, error } = await supabase
     .from("bookings")
     // .select('*')
@@ -112,7 +108,6 @@ export async function updateBooking(id, obj) {
     .eq("id", id)
     .select()
     .single();
-
   if (error) {
     console.error(error);
     throw new Error("Booking could not be updated");

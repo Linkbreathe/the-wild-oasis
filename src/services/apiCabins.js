@@ -15,7 +15,6 @@ export async function deleteCabin(id) {
     .delete()
     .eq('id', id)
   if (error) {
-    console.log(error)
     throw new Error("Cabin could not be deleted")
   }
   return data;
@@ -39,7 +38,6 @@ export async function createEditCabin(newCabin,id) {
 
   const { data, error } = await query.select().single();
   if (error) {
-      console.log(error)
       throw new Error("Cabin could not be deleted")
   }
 

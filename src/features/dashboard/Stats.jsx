@@ -3,7 +3,6 @@ import Stat from './Stat'
 import { HiOutlineBanknotes, HiOutlineBriefcase, HiOutlineCalendarDays, HiOutlineChartBar } from 'react-icons/hi2'
 import { formatCurrency } from '../../utils/helpers'
 export default function Stats({bookings,confirmedStays,numDays,cabinCount}) {
-console.log(bookings,confirmedStays )
     const numBookings = bookings?.length
 
     const sales = bookings?.reduce((acc,cur) => acc+cur.totalPrice,0)

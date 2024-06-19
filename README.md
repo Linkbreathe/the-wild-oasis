@@ -1,8 +1,13 @@
-# React + Vite
+# Link's react program 🏡
+A hotel management program mainly be built by:
+🚗 **Frontend**: react, javascript, rechart, react-icons, styled-components
+🚲 **Backend**: supabase
+🚈 **library**: TanStack, react-hook-form, react-hot-toast, date-fns, react-error-boundary
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Timeline
+⏰ **From**:May 18, 2024 - **End** Jun 19, 2024 (with 13 commits)
 
-Currently, two official plugins are available:
+Thanks for your checking the code,and You can also check it in **following url**:
+[Links-wild-oasis](the-wild-oasis-lemon-one.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Wish you have a good time!

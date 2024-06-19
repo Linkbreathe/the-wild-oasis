@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
-import { HiOutlineHome,HiMiniCalendarDays, HiMiniHomeModern, HiOutlineCalendarDays, HiOutlineUsers, HiCog6Tooth } from "react-icons/hi2";
+import { HiOutlineHome,HiMiniCalendarDays, HiMiniHomeModern,  HiOutlineUsers, HiCog6Tooth } from "react-icons/hi2";
 
 const NavList = styled.ul`
   display: flex;
